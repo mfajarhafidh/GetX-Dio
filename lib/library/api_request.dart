@@ -2,11 +2,11 @@ import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 
 class ApiRequest {
-  final String url;
-  final Map data;
+  final String? url;
+  final Map<String, dynamic>? data;
 
   ApiRequest({
-    required this.url,
+    this.url,
     this.data,
   });
 
@@ -17,11 +17,11 @@ class ApiRequest {
   }
 
   void get({
-    Function() beforeSend,
-    Function(dynamic data) onSuccess,
-    Function(dynamic error) onError,
+    Function()? beforeSend,
+    Function(dynamic data)? onSuccess,
+    Function(dynamic error)? onError,
   }){
-    _dio().get(this.url, queryParameters: this.data).then((res) {
+    _dio().get(url!, queryParameters: data).then((res) {
       if(onSuccess != null) onSuccess(res.data);
     }).catchError((error){
       if(onError != null) onError(error);
