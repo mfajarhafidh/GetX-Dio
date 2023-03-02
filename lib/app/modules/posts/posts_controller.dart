@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 import 'package:getx_dio/app/modules/posts/posts_provider.dart';
-import 'package:getx_dio/models/post.dart';
+import 'package:getx_dio/app/models/post.dart';
 
 class PostsController extends GetxController {
   List<Post> postsList = [];

@@ -1,6 +1,6 @@
-import 'package:getx_dio/library/api_request.dart';
+import 'package:getx_dio/app/library/api_request.dart';
 
-import '../../../models/post.dart';
+import '../../models/post.dart';
 
 class PostsProvider {
   void getPostsList({
